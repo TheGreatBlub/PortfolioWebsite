@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(236, 54, 124, 0.18), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(100, 70, 255, 0.15), transparent 35%),
+    #101318;
+  color: #f4f4f4;
+}
+
+header {
+  height: 75px;
+  background: rgba(10, 12, 16, 0.95);
+  border-bottom: 1px solid #222833;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  border: 3px solid #ec367c;
+  color: #ec367c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+nav a {
+  color: #d6d6d6;
+  text-decoration: none;
+  margin: 0 18px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #ec367c;
+}
+
+.socials {
+  display: flex;
+  gap: 18px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hero {
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 62px;
+  margin: 10px 0;
+}
+
+.hero p {
+  max-width: 440px;
+  color: #b8b8b8;
+  line-height: 1.6;
+}
+
+.small-text,
+.section-tag {
+  color: #ec367c;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.projects-section {
+  text-align: center;
+  padding: 40px 20px 90px;
+}
+
+.projects-section h2 {
+  font-size: 42px;
+  margin: 5px 0;
+}
+
+.section-subtitle {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 800px;
+  margin: 0 auto 70px;
+  padding: 25px;
+  background: rgba(18, 22, 29, 0.85);
+  border: 1px solid #343b48;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #171b22;
+  color: white;
+  border: 1px solid #363d4a;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+input::file-selector-button {
+  background: #ec367c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+button {
+  background: linear-gradient(90deg, #ec367c, #c52d80);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.card-deck {
+  position: relative;
+  min-height: 470px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card {
+  position: absolute;
+  width: 260px;
+  height: 390px;
+  background: #171b22;
+  border: 1px solid rgba(236, 54, 124, 0.65);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, z-index 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-45px) scale(1.06) rotate(0deg) !important;
+  z-index: 50 !important;
+  box-shadow: 0 30px 60px rgba(236, 54, 124, 0.25);
+}
+
+.project-card img {
+  width: 100%;
+  height: 155px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card h3 {
+  margin: 28px 20px 8px;
+  font-size: 23px;
+}
+
+.project-card .line {
+  width: 35px;
+  height: 3px;
+  background: #ec367c;
+  margin: 0 auto 20px;
+}
+
+.project-card p {
+  color: #c8c8c8;
+  padding: 0 22px;
+  line-height: 1.4;
+}
+
+.delete-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  background: #1f242d;
+  color: #ec367c;
+  border-top: 1px solid #303744;
+  margin: 0;
+}
+
+.delete-btn:hover {
+  background: #2a101d;
+}
+
+.contact-section {
+  text-align: center;
+  padding: 50px 20px;
+  border-top: 1px solid #222833;
+}
+
+.contact-section span {
+  color: #ec367c;
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  padding: 25px;
+  border-top: 1px solid #222833;
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .card-deck {
+    min-height: auto;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .project-card {
+    position: relative;
+    transform: none !important;
+  }
+}
